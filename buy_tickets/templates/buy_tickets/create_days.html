@@ -1,0 +1,15 @@
+{% extends "buy_tickets/base_generic.html" %}
+{% block content %}
+
+<h1 class="text-center">Here you can buy your ticket
+    <p class="text-center"><small>Just input what we ask. We will do the rest...</small></p>
+</h1>
+
+ <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Создать дни</button>
+</form>
+
+</form>
+{% endblock%}

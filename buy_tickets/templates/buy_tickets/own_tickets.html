@@ -1,0 +1,22 @@
+{% extends "buy_tickets/base_generic.html" %}
+{% block content %}
+
+<h1 class="text-center">Here you can buy your ticket
+    <p class="text-center"><small>Just input what we ask. We will do the rest...</small></p>
+</h1>
+<h3>Here's your order:</h3>
+<p>Owner: {{user.first_name}} {{user.last_name}}</p>
+<p>Email: {{user.email}}</p>
+<p>Destination: {{trip}}</p>
+<p>Departure time: {{departure_time}}</p>
+<p>Arrival time: {{arrival_time}}</p>
+<p>Price: {{price}}</p>
+
+ {% csrf_token %}
+<form method="POST">
+    {% csrf_token %}
+  {{ form.as_p }}
+<input type = 'submit' value="Buy">
+
+</form>
+{% endblock%}

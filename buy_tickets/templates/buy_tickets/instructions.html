@@ -1,0 +1,24 @@
+{% extends "buy_tickets/base_generic.html" %}
+{% load static %}
+{%block content%}
+<div class="container mt-5">
+  <h1 class="text-center">User guide for booking tickets</h1>
+  <p class="lead">Welcome to our online ticket booking system. With our platform, you can conveniently buy tickets for your next bus trip. Below is a step-by-step guide to help you book your tickets:</p>
+  <ol>
+    <li>Visit our website homepage and browse through the different bus trips available.</li>
+    <li>Click on the 'Book Ticket' button next to the bus trip you wish to book.</li>
+    <li>If you don't have an account, create one by clicking on the 'Sign Up' button. If you already have an account, log in using your username and password.</li>
+    <li>Once you are logged in, you will be taken to a page where you can enter your ticket details. You will need to select the date you wish to travel, the number of seats you require, and your contact details.</li>
+    <li>After filling in the necessary information, click on the 'Book Ticket' button.</li>
+    <li>If you have entered valid information, you will be redirected to a confirmation page, where you can review your booking details and the total price of your tickets.</li>
+    <li>If you are satisfied with your booking details, click on the 'Confirm Order' button to finalize your booking.</li>
+    <li>Your tickets will be sent to your email address, and you can also view them in your profile.</li>
+  </ol>
+  <p class="text-muted"><strong>Note:</strong> You cannot book tickets for a date in the past. Make sure to select the correct date before booking. If you encounter any issues during the booking process, please do not hesitate to contact our support team for assistance.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock %}

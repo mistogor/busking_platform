@@ -1,0 +1,35 @@
+{% extends "buy_tickets/base_generic.html" %}
+{% block content %}
+<br>
+<br>
+
+
+<div class="table-responsive">
+<table class="table table-striped">
+    <thead>
+    <th>Order ID</th>
+    <th>Departure date</th>
+    <th>Trip</th>
+    <th>Departure time</th>
+    <th>Arrival time</th>
+    <th>Owned seats</th>
+    <th>Total price</th>
+      </thead>
+{% for obj in orders %}
+  <tr>
+    <td>{{obj.id}}</td>
+    <td>{{obj.departure_date}}</td>
+    <td>{{obj.trip}}</td>
+    <td>{{obj.departure_time}}</td>
+    <td>{{obj.arrival_time}}</td>
+    <td>{{obj.number_of_seats}}</td>
+    <td>{{obj.total_price}}</td>
+
+
+
+    <td> <a href= '{% url 'profile_ticket_details' username=username id=obj.id %}' class="btn btn-primary btn-sm active" role="button">Check details <br></td>
+  </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

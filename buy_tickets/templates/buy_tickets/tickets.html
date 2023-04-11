@@ -1,0 +1,43 @@
+{% extends "buy_tickets/base_generic.html" %}
+{% block content %}
+<br>
+<br>
+
+<form method="get">
+  {{ filter.form.as_p }}
+  <input type="submit" value="Search">
+</form>
+{% if request.GET %}
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+    <th>Departure city</th>
+    <th>Arrival city</th>
+    <th>Departure time</th>
+    <th>Arrival time</th>
+    <th>Free seats</th>
+    <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for day in filter.qs %}
+      <tr>
+    <td>{{day.trip.depart_city}}</td>
+    <td>{{day.trip.arrival_city}}</td>
+    <td>{{day.trip.departure_time}}</td>
+    <td>{{day.trip.arrival_time}}</td>
+    <td>{{day.available_seats}}</td>
+    <td>{{day.trip.price}}</td>
+        <td> <a href= '{% url 'book_ticket' id=day.id %}' class="btn btn-primary btn-sm active" role="button"> Buy a ticket </td>
+
+  </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+{% endblock %}
+
+</form>

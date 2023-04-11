@@ -1,0 +1,11 @@
+*.pyc  
+__pycache__ 
+myvenv 
+.env
+/static 
+.DS_Store
+.idea/
+.venv/
+.vscode/
+db.sqlite3
+/busking_website/venv

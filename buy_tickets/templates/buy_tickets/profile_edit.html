@@ -1,0 +1,12 @@
+{% extends "buy_tickets/base_generic.html" %}
+
+{% block content %}
+    <h1>Here you can edit your account</h1>
+    <p>Please, make sure you enter correct information:</p>
+    <form action="." method="post">
+        {{ user_edit_form.as_p }}
+        {{ profile_edit_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Save changes"></p>
+    </form>
+{% endblock %}

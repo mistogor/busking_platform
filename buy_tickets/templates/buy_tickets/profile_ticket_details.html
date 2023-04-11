@@ -1,0 +1,41 @@
+{% extends "buy_tickets/base_generic.html" %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1 class="display-5 mb-4">Details of Your Order</h1>
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Trip</th>
+        <td>{{ order.trip }}</td>
+      </tr>
+      <tr>
+        <th>Departure Date</th>
+        <td>{{ order.departure_date }}</td>
+      </tr>
+      <tr>
+        <th>Departure Time</th>
+        <td>{{ order.departure_time }}</td>
+      </tr>
+      <tr>
+        <th>Arrival Time</th>
+        <td>{{ order.arrival_time }}</td>
+      </tr>
+      <tr>
+        <th>Passenger Name</th>
+        <td>{{ order.passenger_name }}</td>
+      </tr>
+      <tr>
+        <th>Phone Number</th>
+        <td>{{ order.phone_number }}</td>
+      </tr>
+      <tr>
+        <th>Number of Seats</th>
+        <td>{{ order.number_of_seats }}</td>
+      </tr>
+      <tr>
+        <th>Total Price</th>
+        <td>{{ order.total_price }}</td>
+      </tr>
+    </table>
+  </div>
+{% endblock %}

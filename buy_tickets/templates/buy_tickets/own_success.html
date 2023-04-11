@@ -1,0 +1,21 @@
+{% extends "buy_tickets/base_generic.html" %}
+{% block content %}
+<h1 class="display-5">You have successfully booked a ticket
+</h1>
+<h1>
+      <small class="text-muted">Check your order</small>
+</h1>
+<table class="table table-success table-striped">
+
+
+<p> Your trip: {{ order.trip }}</p>
+<p>Departure date: {{ order.departure_date }}</p>
+<p>Departure time: {{ order.departure_time }}</p>
+<p>Arrival time: {{ order.arrival_time }}</p>
+<p>Passenger name: {{ order.passenger_name }}</p>
+<p>Phone number: {{ order.phone_number }}</p>
+<p>Number of seats: {{ order.number_of_seats }}</p>
+<p>Total price: {{ order.total_price }}</p>
+
+</table>
+{% endblock %}
